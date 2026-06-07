@@ -3,4 +3,4 @@ project(trabalho C)
 
 set(CMAKE_C_STANDARD 17)
 
-add_executable(trabalho src/main.c)
+add_executable(trabalho main.c)
