@@ -9,9 +9,9 @@ int menu(int respostaMenu)
         printf("2 - Registrar Notas\n");
         printf("3 - Exibir Alunos\n");
         printf("4 - Sair\n");
-        scanf("%d",&respostaMenu);
+        fgets()
 
-        //O switch cahama as respectivas funções para cada ação desejada:
+        //O switch chama as respectivas funções para cada ação desejada:
         switch(respostaMenu)
         {
             case 1:
