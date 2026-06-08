@@ -1,38 +1,23 @@
-#include <menu.h>
 #include <stdio.h>
+#include "menu.h"
 
-int menu(int respostaMenu)
-{
-    do
-    {
-        printf(printf("\033[1;33m---- Sistema de Gerenciamento Escolar (SGE) ----\033[0m\n");
-        printf("1 - Cadastrar Aluno\n");
-        printf("2 - Registrar Notas\n");
-        printf("3 - Exibir Alunos\n");
-        printf("4 - Sair\n");
-        fgets()
+int exibirMenu() {
+    int opcao;
 
-        //O switch chama as respectivas funções para cada ação desejada:
-        switch(respostaMenu)
-        {
-            case 1:
-                cadatrarAluno();
-                break;
-            case 2:
-                registrarNotas();
-                break;
-            case 3:
-                exibirAlunos();
-                break;
-            case 4:
-                sair();
-                break;
-            default:
-                printf("Saindo Inválido\n");
-            break;
-        }
+    printf("\033[1;33m---- Sistema de Gerenciamento Escolar (SGE) ----\033[0m\n");
+    printf("1 - Cadastrar Aluno\n");
+    printf("2 - Registrar Notas\n");
+    printf("3 - Exibir Alunos\n");
+    printf("4 - Sair\n");
+    printf("----------------------------------------------\n");
+    printf("Escolha uma opcao: ");
+
+    //Validação contra o uso de letras no menu, o scanf devolve '1' se conseguir ler um número.
+    if (scanf("%d", &opcao) != 1) {
+        // Se o usuário digitar uma letra, limpamos o buffer do teclado para o caractere inválido não travar o loop.
+        while (getchar() != '\n');
+        return -1; // Retorna um código de erro para o switch saber que foi inválido
     }
-    while (respostaMenu != 4);
 
+    return opcao;
 }
-
