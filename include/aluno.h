@@ -2,12 +2,25 @@
 #ifndef ALUNO_H //Se não conhecer o header.
 #define ALUNO_H //Define o header com os parametros passados.
 
+#define MAX_ALUNOS 50 //Limite de alunos totais.
+#define MAX_MATERIAS 5 //Limite de matérias que um aluno pode ter.
+
+//Struct para cada matéria:
+typedef struct {
+    char nomeDisciplina[30];
+    float notas[4];
+    float media;
+    char situacao[15]; //Aorovado ou Reprovado.
+} Disciplina;
+
 typedef struct
 {
     char nome[61];
     int matricula;
-    float notas, media;
-    char situacao[31];
+    Disciplina materias[MAX_MATERIAS];
+    float notas[4];
+    float media;
+    int qtdMateriasCadastradas;
 } Aluno;
 
 //Funções:

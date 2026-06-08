@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h> //Biblioteca que implementa funções básicas, em especial o printf e scanf
 #include "menu.h"
 
 int exibirMenu() {

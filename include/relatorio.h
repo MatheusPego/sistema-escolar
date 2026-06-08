@@ -3,14 +3,9 @@
 #define RELATORIO_H //Define o header com os parametros passados.
 #include "aluno.h"//É nescessária a adição desse .h por possuir dependência direta com o relatorio.h
 
-typedef struct
-{
-
-} Relatorio;
-
 //Funções:
 
 void exibirAlunos(Aluno lista[], int totalAlunos);
-void exibirTurmas(Aluno lista[]);
+void exibirTurmas(Aluno lista[], int totalAlunos);
 
 #endif //Se já conhece o header, desconsidera os parâmetros.

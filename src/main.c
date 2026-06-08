@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h> //Biblioteca que implementa funções básicas, em especial o printf e scanf
 #include <locale.h>
 #include "aluno.h"
 #include "menu.h"
@@ -21,17 +21,20 @@ int main(void)
         switch (opcao)
         {
             case 1:
-            printf("\n\033[1;33m[Aviso]\033[0m Você escolheu a opção: Cadastrar Aluno (Função será ativada na Fase 4).\n");
+            printf("\n\033[1;33m[Aviso]\033[0m Você escolheu a opção: Cadastrar Aluno.\n");
+            // Passa a lista e o ENDEREÇO da variável totalAlunos por referência (&).
+            cadastrarAluno(lista, &totalAlunos);
             break;
 
         case 2:
-            // Na Fase 4: registrarNotas(lista, totalAlunos);
             printf("\n\033[1;33m[Aviso]\033[0m Você escolheu a opção: Registrar Notas (Função será ativada na Fase 4).\n");
+            lancarNotas(lista, totalAlunos); //Passa totalAlunos por valor
             break;
 
         case 3:
-            // Na Fase 4: exibirAlunos(lista, totalAlunos);
-            printf("\n\033[1;33m[Aviso]\033[0m Você escolheu a opção: Exibir Alunos (Função será ativada na Fase 4).\n");
+            printf("\n\033[1;33m[Aviso]\033[0m Você escolheu a opção: Exibir Alunos.\n");
+            //Aqui não é nescessário o uso do '&' porque não vamos alterar o total, só queremos ler o valor
+            exibirTurmas(lista, totalAlunos);
             break;
 
         case 4:
