@@ -14,7 +14,7 @@ int exibirMenu() {
 
     //Validação contra o uso de letras no menu, o scanf devolve '1' se conseguir ler um número.
     if (scanf("%d", &opcao) != 1) {
-        // Se o usuário digitar uma letra, limpamos o buffer do teclado para o caractere inválido não travar o loop.
+        // Se o usuário digitar uma letra, limpamos o buffer do teclado para o caractere inválido não travar o nosso loop.
         while (getchar() != '\n');
         return -1; // Retorna um código de erro para o switch saber que foi inválido
     }

@@ -1,6 +1,6 @@
-#include <stdio.h>;
-#include <locale.h>;
-#include "alunos.h"
+#include <stdio.h>
+#include <locale.h>
+#include "aluno.h"
 #include "menu.h"
 #include "notas.h"
 #include "relatorio.h"
@@ -16,7 +16,7 @@ int main(void)
     do
     {
         //Chamada pro Menu:
-        opcao = exibirMenuenu();
+        opcao = exibirMenu();
 
         switch (opcao)
         {

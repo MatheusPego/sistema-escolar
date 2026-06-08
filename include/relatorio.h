@@ -11,6 +11,6 @@ typedef struct
 //Funções:
 
 void exibirAlunos(Aluno lista[], int totalAlunos);
-voi exibirTurmas(Aluno lista[]);
+void exibirTurmas(Aluno lista[]);
 
 #endif //Se já conhece o header, desconsidera os parâmetros.
