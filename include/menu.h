@@ -9,5 +9,6 @@ typedef struct
 
 //Funções:
 
+int exibirMenu();
 
 #endif //Se já conhece o header, desconsidera os parâmetros.

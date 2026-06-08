@@ -12,5 +12,7 @@ typedef struct
 
 //Funções:
 
+void cadastrarAluno(Aluno lista[], int *totalAlunos); //Adiciona um aluno.
+void removerAluno(Aluno lista[], int *totalAlunos); //Remove um aluno.
 
 #endif //Se já conhece o header, desconsidera os parâmetros.
