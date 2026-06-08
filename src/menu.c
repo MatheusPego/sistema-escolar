@@ -1,3 +1,4 @@
+#include <menu.h>
 #include <stdio.h>
 
 int menu(int respostaMenu)
