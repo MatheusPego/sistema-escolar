@@ -4,7 +4,6 @@
 #include "aluno.h" //É nescessária a adição desse .h por possuir dependência direta com o notas.h
 
 //Funções:
-
 void lancarNotas(Aluno lista[], int totalAlunos);
 
 #endif //Se já conhece o header, desconsidera os parâmetros.

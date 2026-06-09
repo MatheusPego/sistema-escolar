@@ -1,4 +1,7 @@
-#include <stdio.h>
+//Bibliotecas nativas do C:
+#include <stdio.h>  // Biblioteca que implementa funções básicas, em especial o printf e scanf
+
+//Headers autorais:
 #include "relatorio.h"
 #include "aluno.h"
 

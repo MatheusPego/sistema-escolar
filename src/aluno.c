@@ -1,6 +1,6 @@
 // Bibliotecas nativas do C:
-#include <stdio.h>  // Biblioteca que implementa funções básicas, em especial o printf e scanf
-#include <string.h> // Contém as funções ideais para manipulação de strings, como o strcspn
+#include <stdio.h>  //Biblioteca que implementa funções básicas, em especial o printf e scanf
+#include <string.h> //Contém as funções ideais para manipulação de strings, como o strcspn
 
 //Header Autoral (Módulo do Sistema):
 #include "aluno.h"

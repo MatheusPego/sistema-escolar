@@ -4,7 +4,6 @@
 #include "aluno.h"//É nescessária a adição desse .h por possuir dependência direta com o relatorio.h
 
 //Funções:
-
 void exibirAlunos(Aluno lista[], int totalAlunos);
 void exibirTurmas(Aluno lista[], int totalAlunos);
 
