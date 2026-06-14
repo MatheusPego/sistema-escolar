@@ -5,7 +5,7 @@
 
 //Funções:
 void salvarDados(Aluno lista[], int totalAlunos);
-void carregarDados(Aluno lista[], int *totalAlunos);
+void carregarDados(Aluno **lista, int *totalAlunos);
 void resetDados();
 
 

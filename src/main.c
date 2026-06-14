@@ -13,13 +13,22 @@
 int main(void)
 {
     setlocale(LC_ALL, "Portuguese"); //Estabelece por padrão as acentuações da língua portuguesa;
-    Aluno lista[50]; //Lista de todos os alunos.
+
+    Aluno *lista = NULL; //Lista de todos os alunos (ponteiro para a Heap).
     int totalAlunos = 0; //Contador inicial de alunos, iniciamos em zero.
+    int capacidadedados = 10; // Capacidade inicial padrão do sistema
     int opcao; //Variável para capturar a resposta do Menu principal.
     int subOpcao; //Variável para capturar a escolha do submenu de relatórios.
 
-    //Carrega os dados do arquivo para a memória logo ao abrir o programa:
-    carregarDados(lista, &totalAlunos);
+    // CORREÇÃO 1: Alocação inicial de segurança na Heap para o programa iniciar estável
+    lista = (Aluno *)malloc(capacidadedados * sizeof(Aluno));
+    if (lista == NULL) {
+        printf("\n\033[1;31m[Erro Fatal]\033[0m Falha crítica do Sistema Operacional ao conceder RAM.\n");
+        return 1; // Encerra o programa se o computador estiver sem memória
+    }
+
+    //Chamada corrigida com os 3 parâmetros dinâmicos usando endereço (&)
+    carregarDados(&lista, &totalAlunos, &capacidadedados);
 
     do
     {
@@ -30,7 +39,7 @@ int main(void)
         {
         case 1:
             printf("\n\033[1;33m[Aviso]\033[0m Você escolheu a opção: Cadastrar Aluno.\n");
-            cadastrarAluno(&lista, &totalAlunos, &capacidade);
+            cadastrarAluno(&lista, &totalAlunos, &capacidadedados);
             salvarDados(lista, totalAlunos);
             break;
 
@@ -42,9 +51,8 @@ int main(void)
 
         case 3:
             printf("\n\033[1;33m[Aviso]\033[0m Você escolheu a opção: Exibir Alunos.\n");
-            printf("\n\033[1;33m[Aviso]\033[0m Você escolheu a opção: Exibir Alunos.\n");
 
-            //Construção do submenu limpo:
+            //Construção do submenu limpo (Removido o print duplicado):
             printf("\n   Submenu de Relatórios    \n");
             printf("1 - Listar todos os alunos cadastrados\n");
             printf("2 - Buscar aluno específico por matrícula\n");
@@ -73,13 +81,11 @@ int main(void)
                 printf("\n\033[1;33m[Opção inválida!]\033[0m Voltando ao menu principal.\n");
                 break;
             }
-            break;
-            break;
+            break; // Removido o segundo break redundante que existia aqui
 
         case 4:
             printf("\n\033[1;33m[Aviso]\033[0m Você escolheu a opção: Excluir Aluno.\n");
-            //Passamos o endereço de tudo para permitir alteração e otimização de RAM
-            excluirAluno(&lista, &totalAlunos, &capacidade);
+            excluirAluno(&lista, &totalAlunos, &capacidadedados);
 
             //Salva a nova configuração limpa imediatamente no arquivo binário
             salvarDados(lista, totalAlunos);
@@ -90,12 +96,13 @@ int main(void)
             break;
 
         default:
-            printf("\n\033[1;33m[Opcao invalida!]\033[0m Digite um numero valido (1 ... 5).\n");
+            printf("\n\033[1;33m[Opção inválida!]\033[0m Digite um número válido (1 ... 5).\n");
             break;
         }
     }
-    while (opcao != 5); //O loop agora roda enquanto for diferente de 5
+    while (opcao != 5);
 
+    //Liberação obrigatória da memória RAM antes de fechar o software
     free(lista);
     lista = NULL;
 

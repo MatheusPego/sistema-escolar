@@ -32,7 +32,7 @@ typedef struct
 
 //Funções:
 void cadastrarAluno(Aluno **lista, int *totalAlunos, int *capacidade); //Adiciona um aluno.
-void excluirAluno(Aluno **lista[], int *totalAlunos, int *capacidade); //Remove um aluno.
+void excluirAluno(Aluno **lista, int *totalAlunos, int *capacidade); //Remove um aluno.
 //O 'Aluno lista[]' é um vetor declarado na main
 
 #endif //Se já conhece o header, desconsidera os parâmetros.
