@@ -11,9 +11,9 @@ O intuito do trabalho é utilizar todos os conceitos já aplicados em sala de au
 
 3° - Calcular a média e situação de cada aluno;
 
-4° - Ter um relatório com a situação do aluno e sua turma;
+4° - Ter um relatório com a situação do aluno e turma;
 
 5° - Salvar em arquivo;
 
-Todo o trabalho, ao total, contém código, documentação e slides. Disponivéis a segui
+Todo o trabalho, ao total, contém código, documentação e slides. Disponivéis a seguir
 

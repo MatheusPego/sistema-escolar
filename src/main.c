@@ -9,13 +9,13 @@
 int main(void)
 {
     setlocale(LC_ALL, "Portuguese"); //Estabelece por padrão as acentuações da lingua portuguesa;
-    Aluno lista[50];
-    int totalAlunos = 0; //Contador inicial de alunos, inciamos em zero
+    Aluno lista[50]; //Lista de todos os alunos.
+    int totalAlunos = 0; //Contador inicial de alunos, iniciamos em zero.
     int opcao;
 
     do
     {
-        //Chamada pro Menu:
+        //Chamada para o Menu:
         opcao = exibirMenu();
 
         switch (opcao)
@@ -27,7 +27,7 @@ int main(void)
             break;
 
         case 2:
-            printf("\n\033[1;33m[Aviso]\033[0m Você escolheu a opção: Registrar Notas (Função será ativada na Fase 4).\n");
+            printf("\n\033[1;33m[Aviso]\033[0m Você escolheu a opção: Registrar Notas.\n");
             lancarNotas(lista, totalAlunos); //Passa totalAlunos por valor
             break;
 

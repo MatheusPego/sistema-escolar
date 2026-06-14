@@ -1,4 +1,4 @@
-//Aqui aplico o INCLUSION GUARD, para evitar que o compilador leia a mesma coisa duas vezes.
+//Aqui aplico o INCLUDE GUARDS, para evitar que o compilador leia a mesma coisa duas vezes.
 #ifndef ALUNO_H //Se não conhecer o header.
 #define ALUNO_H //Define o header com os parametros passados.
 
@@ -13,11 +13,19 @@ typedef struct {
     char situacao[15]; //Aprovado ou Reprovado.
 } Disciplina;
 
+//Struct para a disciplina:
+//Struct para a turma e sala do aluno:
+typedef struct {
+    char codigoTurma[15]; //Ex: INFO1, 3ANOA.
+    char numeroSala[10];  //Ex: Sala 102, Lab 3.
+} Turma;
+
 //Struct aluno:
 typedef struct
 {
     char nome[61];
     int matricula;
+    Turma turma;
     Disciplina materias[MAX_MATERIAS];
     float notas[4];
     float media;
