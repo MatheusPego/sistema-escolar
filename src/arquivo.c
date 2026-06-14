@@ -25,7 +25,7 @@ void salvarDados(Aluno lista[], int totalAlunos) {
     fclose(arquivo);
 }
 
-void carregarDados(Aluno lista[], int *totalAlunos) {
+void carregarDados(Aluno **lista, int *totalAlunos) {
     //Abre o arquivo no modo "read binary" (rb).
     FILE *arquivo = fopen("banco_alunos.dat", "rb");
 
