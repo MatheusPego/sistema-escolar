@@ -1,5 +1,7 @@
+//Bibliotecas nativas:
 #include <stdio.h> //Biblioteca que implementa funções básicas, em especial o printf e scanf
 #include <locale.h> //Biblioteca para estabelecer adequações de linguagem.
+#include <stdlib.h> //Biblioteca para malloc(), free(), realloc()
 
 //Headers Autorais:
 #include "aluno.h"
@@ -10,7 +12,7 @@
 
 int main(void)
 {
-    setlocale(LC_ALL, "Portuguese"); //Estabelece por padrão as acentuações da lingua portuguesa;
+    setlocale(LC_ALL, "Portuguese"); //Estabelece por padrão as acentuações da língua portuguesa;
     Aluno lista[50]; //Lista de todos os alunos.
     int totalAlunos = 0; //Contador inicial de alunos, iniciamos em zero.
     int opcao; //Variável para capturar a resposta do Menu principal.
@@ -28,22 +30,18 @@ int main(void)
         {
         case 1:
             printf("\n\033[1;33m[Aviso]\033[0m Você escolheu a opção: Cadastrar Aluno.\n");
-            // Passa a lista e o ENDEREÇO da variável totalAlunos por referência (&).
-            cadastrarAluno(lista, &totalAlunos);
-
-            //Salva os dados no disco rígido imediatamente após o cadastro:
+            cadastrarAluno(&lista, &totalAlunos, &capacidade);
             salvarDados(lista, totalAlunos);
             break;
 
         case 2:
             printf("\n\033[1;33m[Aviso]\033[0m Você escolheu a opção: Registrar Notas.\n");
-            lancarNotas(lista, totalAlunos); //Passa totalAlunos por valor
-
-            //Salva os dados no disco rígido para não perder as notas recém-lançadas:
+            lancarNotas(lista, totalAlunos);
             salvarDados(lista, totalAlunos);
             break;
 
         case 3:
+            printf("\n\033[1;33m[Aviso]\033[0m Você escolheu a opção: Exibir Alunos.\n");
             printf("\n\033[1;33m[Aviso]\033[0m Você escolheu a opção: Exibir Alunos.\n");
 
             //Construção do submenu limpo:
@@ -60,33 +58,46 @@ int main(void)
                 subOpcao = -1;
             }
 
-            //Direcionamento das rotinas de exibição que criamos juntas:
+            //Faz o uso das funções dentro do submenu:
             switch(subOpcao) {
-                case 1:
-                    exibirTurmas(lista, totalAlunos);
-                    break;
-                case 2:
-                    exibirAlunoPorMatricula(lista, totalAlunos);
-                    break;
-                case 3:
-                    exibirAlunosPorTurma(lista, totalAlunos);
-                    break;
-                default:
-                    printf("\n\033[1;33m[Opção inválida!]\033[0m Voltando ao menu principal.\n");
-                    break;
+            case 1:
+                exibirTurmas(lista, totalAlunos);
+                break;
+            case 2:
+                exibirAlunoPorMatricula(lista, totalAlunos);
+                break;
+            case 3:
+                exibirAlunosPorTurma(lista, totalAlunos);
+                break;
+            default:
+                printf("\n\033[1;33m[Opção inválida!]\033[0m Voltando ao menu principal.\n");
+                break;
             }
+            break;
             break;
 
         case 4:
+            printf("\n\033[1;33m[Aviso]\033[0m Você escolheu a opção: Excluir Aluno.\n");
+            //Passamos o endereço de tudo para permitir alteração e otimização de RAM
+            excluirAluno(&lista, &totalAlunos, &capacidade);
+
+            //Salva a nova configuração limpa imediatamente no arquivo binário
+            salvarDados(lista, totalAlunos);
+            break;
+
+        case 5:
             printf("\nSaindo do sistema. Obrigado por utilizar o SGE!\n");
             break;
 
         default:
-            printf("\n\033[1;33m[Opção inválida!]\033[0m Digite um número válido entre as opções (1 ... 4).\n");
+            printf("\n\033[1;33m[Opcao invalida!]\033[0m Digite um numero valido (1 ... 5).\n");
             break;
         }
     }
-    while (opcao != 4);
+    while (opcao != 5); //O loop agora roda enquanto for diferente de 5
+
+    free(lista);
+    lista = NULL;
 
     return 0;
 }

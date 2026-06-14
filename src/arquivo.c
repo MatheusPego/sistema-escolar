@@ -45,3 +45,14 @@ void carregarDados(Aluno lista[], int *totalAlunos) {
     //Fecha o arquivo de leitura:
     fclose(arquivo);
 }
+
+void resetDados()
+{
+    if (remove("banco_alunos.dat") == 0)
+    {
+        printf("\n\033[1;32m[Sucesso]\033[0m O banco de dados físico foi deletado com sucesso.\n");
+    } else {
+        //Se cair aqui, é porque o arquivo não existia ou o SO bloqueia o acesso
+        printf("\n\033[1;33m[Aviso]\033[0m Nenhum banco de dados existente para deletar.\n");
+    }
+}

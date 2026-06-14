@@ -6,7 +6,7 @@
 //Funções:
 void salvarDados(Aluno lista[], int totalAlunos);
 void carregarDados(Aluno lista[], int *totalAlunos);
-void removerDados(Aluno lista[], int *totalAlunos);
+void resetDados();
 
 
 #endif //Se já conhece o header, desconsidera os parâmetros.
