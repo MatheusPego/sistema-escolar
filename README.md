@@ -1,5 +1,5 @@
 # Sistema de Gerenciamento Escolar (SGE)
-Trabalho de conclusão de semestre referente a disciplina de Introdução a Programação, do COLTEC-UFMG. Orientado pela professora Camille Braga, utilizando a Linguagem C. 
+Trabalho de conclusão de semestre referente a disciplina Laboratório de Programação, do COLTEC-UFMG. Orientado pela professora Camille Braga, utilizando a Linguagem C. 
 
 O intuito do trabalho é utilizar todos os conceitos já aplicados em sala de aula. Aplicando no projeto lógica de programação, estrutura de dados e boas práticas. O tema escolhido foi "Sistema de Notas Escolares", que aborda conceitos como matrizes, vetores, ponteiros, arquivos e etc.
 
@@ -15,5 +15,7 @@ O intuito do trabalho é utilizar todos os conceitos já aplicados em sala de au
 
 5° - Salvar em arquivo;
 
-Todo o trabalho, ao total, contém código, documentação e slides. Disponivéis a seguir
+Ao longo do desenvolvimento do trabalho utilizamos algumas ferramentas, sendo elas:
+
+
 

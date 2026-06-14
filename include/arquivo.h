@@ -3,11 +3,6 @@
 #define ARQUIVO_H //Define o header com os parametros passados.
 #include "aluno.h" //É nescessária a adição desse .h por possuir dependência direta com o arquivo.h
 
-typedef struct
-{
-
-} Arquivo;
-
 //Funções:
 void salvarDados(Aluno lista[], int totalAlunos);
 void carregarDados(Aluno lista[], int *totalAlunos);

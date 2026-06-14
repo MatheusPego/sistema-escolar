@@ -35,6 +35,17 @@ void cadastrarAluno(Aluno lista[], int *totalAlunos)
     //O aluno começa com zero matérias cadastradas.
     lista[indice].qtdMateriasCadastradas = 0;
 
+    //Recebe a turma:
+    printf("Digite o código da turma: ");
+    int turmaAluno;
+    while ((turmaAluno = getchar()) != '\n' && turmaAluno != EOF); //Limpa o buffer do teclado.
+    fgets(lista[*totalAlunos].turma.codigoTurma, 15, stdin);
+    lista[*totalAlunos].turma.codigoTurma[strcspn(lista[*totalAlunos].turma.codigoTurma, "\n")] = '\0';
+
+    printf("Digite o número da sala: ");
+    fgets(lista[*totalAlunos].turma.numeroSala, 10, stdin);
+    lista[*totalAlunos].turma.numeroSala[strcspn(lista[*totalAlunos].turma.numeroSala, "\n")] = '\0';
+
     //Passa para a main.c que agora há +1 aluno na estante.
     (*totalAlunos)++;
 
