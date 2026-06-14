@@ -15,3 +15,5 @@ O intuito do trabalho é utilizar todos os conceitos já aplicados em sala de au
 
 5° - Salvar em arquivo;
 
+Todo o trabalho, ao total, contém código, documentação e slides. Disponivéis a segui
+
