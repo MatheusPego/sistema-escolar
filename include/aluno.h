@@ -13,7 +13,6 @@ typedef struct {
     char situacao[15]; //Aprovado ou Reprovado.
 } Disciplina;
 
-//Struct para a disciplina:
 //Struct para a turma e sala do aluno:
 typedef struct {
     char codigoTurma[15]; //Ex: INFO1, 3ANOA.
@@ -27,14 +26,13 @@ typedef struct
     int matricula;
     Turma turma;
     Disciplina materias[MAX_MATERIAS];
-    float notas[4];
     float media;
     int qtdMateriasCadastradas;
 } Aluno;
 
 //Funções:
-void cadastrarAluno(Aluno lista[], int *totalAlunos); //Adiciona um aluno.
-void removerAluno(Aluno lista[], int *totalAlunos); //Remove um aluno.
+void cadastrarAluno(Aluno **lista, int *totalAlunos, int *capacidade); //Adiciona um aluno.
+void excluirAluno(Aluno **lista[], int *totalAlunos, int *capacidade); //Remove um aluno.
 //O 'Aluno lista[]' é um vetor declarado na main
 
 #endif //Se já conhece o header, desconsidera os parâmetros.
