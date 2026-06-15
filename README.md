@@ -5,17 +5,18 @@ O intuito do trabalho é utilizar todos os conceitos já aplicados em sala de au
 
 ### Fluxo de Funcionamento:
 
-1º - Devemos cadastrar alunos;
+- 1º - Devemos cadastrar alunos;
+- 2° - Registrar as notas por disciplina, para cada aluno;
+- 3° - Calcular a média e situação de cada aluno;
+- 4° - Ter um relatório com a situação do aluno e turma;
+- 5° - Salvar em arquivo;
 
-2° - Registrar as notas por disciplina, para cada aluno;
+### Ferramentas:
+Ao longo do desenvolvimento do trabalho utilizamos algumas ferramentas, sendo as principais:
 
-3° - Calcular a média e situação de cada aluno;
-
-4° - Ter um relatório com a situação do aluno e turma;
-
-5° - Salvar em arquivo;
-
-Ao longo do desenvolvimento do trabalho utilizamos algumas ferramentas, sendo elas:
-
-
+- CLion: IDE otimizada para C/C++, facilitando o desenvolvimento;
+- CMake: Depurador também otimizado para a IDE;
+- Canva: Utilizado na elaboração dos Slides de apresentação;
+- Git & GitHub: Ferramentas de versionamento de código;
+- ISO/IEC 9899: Documentação da linguagem;
 
