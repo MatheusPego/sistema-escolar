@@ -28,7 +28,7 @@ int main(void)
     }
 
     //Chamada corrigida com os 3 parâmetros dinâmicos usando endereço (&)
-    carregarDados(&lista, &totalAlunos, &capacidadedados);
+    void carregarDados(Aluno **lista, int *totalAlunos);
 
     do
     {
