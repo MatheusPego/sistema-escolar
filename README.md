@@ -1,7 +1,7 @@
 # Sistema de Gerenciamento Escolar (SGE)
 Trabalho de conclusão de semestre referente a disciplina Laboratório de Programação, do COLTEC-UFMG. Orientado pela professora Camille Braga, utilizando a Linguagem C. 
 
-O intuito do trabalho é utilizar todos os conceitos já aplicados em sala de aula. Aplicando no projeto lógica de programação, estrutura de dados e boas práticas. O tema escolhido foi "Sistema de Notas Escolares", que aborda conceitos como matrizes, vetores, ponteiros, arquivos e etc.
+O intuito do trabalho é utilizar todos os conceitos já aplicados em sala de aula. Aplicando no projeto lógica de programação, estrutura de dados e boas práticas. O tema escolhido foi "Sistema de Notas Escolares", que aborda conceitos como matrizes, vetores, ponteiros, arquivos e etc. Posteriormente, adotamos o nome para 'Sistema de Gerenciamento Escolar (SGE)'. 
 
 ### Fluxo de Funcionamento:
 
