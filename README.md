@@ -19,7 +19,7 @@ Ao longo do desenvolvimento do trabalho utilizamos algumas ferramentas, sendo as
 - **Git & GitHub:** Ferramentas de versionamento de código;
 - **ISO/IEC 9899:** Documentação da linguagem;
 
-### Dependência Entre Arquivos
+### Dependência Entre Arquivos:
 - **aluno.h:** A base de dados tipada do sistema. Não possui dependências externas e define as estruturas Disciplina, Turma e Aluno. 
 - **arquivo.h / notas.h / relatorio.h:** Possuem dependência direta de aluno.h, pois recebem registros ou ponteiros do tipo Aluno em suas assinaturas de função. 
 - **main.c:** O centro da aplicação. Inclui todos os cabeçalhos autorais para orquestrar o fluxo de execução e gerenciar o ciclo de vida do vetor principal na memória.
